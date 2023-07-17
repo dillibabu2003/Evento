@@ -77,24 +77,34 @@
 
 .id{
     margin-left: 23%;
+    display: flex;
+    align-items: center;
 }
 
 .name{
     margin-left: 15%;
+    display: flex;
+    align-items: center;
 
 }
 .mail{
-    margin-left: 25%;
+    margin-left: 24%;
+    display: flex;
+    align-items: center;
 
 }
 
 .pass{
     margin-left: 17%;
+    display: flex;
+    align-items: center;
 
 
 }
 
 .number{
     margin-left: 17%;
+    display: flex;
+    align-items: center;
 
 }
