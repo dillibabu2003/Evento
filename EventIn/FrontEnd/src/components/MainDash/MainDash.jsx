@@ -15,12 +15,6 @@ const MainDash = () => {
       <div className="manage-events">
         <button className="manage-events-button" onClick={openManageEvent}>Manage Events</button>
       </div>
-      {/* <div className="event-list">
-        <EventInfo />
-        <EventInfo />
-        <EventInfo />
-      </div>
-      <div className=""></div> */}
     </div>
   );
 };
