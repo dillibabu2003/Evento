@@ -10,12 +10,22 @@ const Manage = () => {
  
   const [isPopupVisible, setPopupVisible] = useState(false);
   const [eventsVisible, setEventsVisible] =useState(false);
+  const [displaySearchResult, setDisplaySearchResult]=useState([]);
+
+  const [searchval,setSeacrh]=useState([]);
+  
+  const [images, setImages] = useState([]) ;
+  const [imageURLs, setImageURLs] = useState([]) ;
+
   const eventsList=[{date:"26/10/2003",title:"techno 2k23",description:"This is an technical symposium conducted by sri eshwar college of engineering to teach students about the technologies"},
   {date:"26/10/2003",title:"techno 2k23",description:"This is an technical symposium conducted by sri eshwar college of engineering to teach students about the technologies"},
   {date:"26/10/2003",title:"techno 2k23",description:"This is an technical symposium conducted by sri eshwar college of engineering to teach students about the technologies"}]
   
-    const [images, setImages] = useState([]) ;
-    const [imageURLs, setImageURLs] = useState([]) ;
+  const searchList=[{date:"26/10/2003",title:"techno 2k23",description:"search result 1"},
+  {date:"26/10/2003",title:"techno 2k23",description:"search result 2"},
+  {date:"26/10/2003",title:"techno 2k23",description:"search result 3"}]
+  
+    
     useEffect ( () => {
     if (images. length < 1) return;
     const newImageUrls = [];
@@ -27,11 +37,15 @@ const Manage = () => {
     setImages ([...e.target.files]);
     }
 
-
+    const onSearchStore=(e)=>{
+      console.log(searchval);
+      setSeacrh(e.target.value);
+  }
   const handleButtonClick = () => {
-    if(eventsVisible){
+   
       setEventsVisible(false)
-    }
+      setDisplaySearchResult(false)
+ 
     setPopupVisible(true);
   };
 
@@ -40,11 +54,19 @@ const Manage = () => {
   };
   
   const displayEventsClick=()=>{
-    if(isPopupVisible){
+   
       setPopupVisible(false);
-    }
+      setDisplaySearchResult(false);
+   
     setEventsVisible(true);
   };
+
+  const displaySearchResultClick=()=>{
+    
+        setPopupVisible(false);
+        setEventsVisible(false);
+        setDisplaySearchResult(true);
+  }
   const closeEventsClick=()=>{
      setEventsVisible(false);
   };
@@ -59,10 +81,9 @@ const Manage = () => {
           <div>Add Events</div>
       </div>
       <div className="box">
-          <input type="text" placeholder="Search here..."></input>
-          <a href="#">
-            <i class="fas fa-search"></i>
-          </a>
+           <input type="text" placeholder="Search here..."  onChange={onSearchStore} ></input>
+          
+          <i  onClick={displaySearchResultClick}class="fas fa-search"></i> 
         </div>
     </div>
     <div>
@@ -86,9 +107,37 @@ const Manage = () => {
       )}
       {
         eventsVisible && (
-                <div onClick={closeEventsClick}>
+                <div>
                   <div  className='events-list'>
                     {eventsList.map((item,index)=>{
+                      return(
+                  <div className="feedback-item">
+                          <div className="feedback-top">
+                            <div className="feedback-username">
+                              <h3>{item.title}</h3>
+                             </div>
+                           <div className="feedback-date">
+                     <h5>{item.date}</h5>
+                </div>
+                </div>
+              <div className="feedback-text">
+                <h4>
+                 {item.description}
+                </h4>
+              </div>
+            </div>
+                  )
+              })
+            }
+              </div>
+             </div>
+        )
+      }
+      {
+        displaySearchResult && (
+                <div>
+                  <div  className='events-list'>
+                    {searchList.map((item,index)=>{
                       return(
                   <div className="feedback-item">
                           <div className="feedback-top">

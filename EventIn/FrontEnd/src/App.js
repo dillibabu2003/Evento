@@ -9,6 +9,7 @@ import Feedback from './components/Feedback/Feedback';
 import History from './components/History/History';
 import Manage from './components/Manage/Manage';
 import UserDash from './components/UserDash/UserDash';
+import SearchList from './components/SearchList/SearchList';
 
 // import Complaints from './components/Complaints/Complaints';
 
@@ -25,6 +26,7 @@ function App() {
               <Route path="/feedback" element={<Feedback/>}/>
               <Route path="/manage" element={<Manage/>}/>
               <Route path='/userDash' element={<UserDash/>}/>
+              <Route path='/searchlist' element={<SearchList/>}/>
             
          </Routes>
          </div>
