@@ -11,7 +11,6 @@ const Manage = () => {
   const [isPopupVisible, setPopupVisible] = useState(false);
   const [eventsVisible, setEventsVisible] =useState(false);
   const [displaySearchResult, setDisplaySearchResult]=useState([]);
-
   const [searchval,setSeacrh]=useState([]);
   
   const [images, setImages] = useState([]) ;
