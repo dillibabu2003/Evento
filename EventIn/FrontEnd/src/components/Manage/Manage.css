@@ -123,3 +123,19 @@ img{
 .add-event-btn:hover{
     background-color: #5c5858
 }
+
+.register-unregister{
+    display: flex;
+    justify-content: center;
+}
+.register-unregister-button{
+     background-color: #171515;
+     color: white ;
+     height:35px;
+     width: 100px;
+     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 7px;
+}
