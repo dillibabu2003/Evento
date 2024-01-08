@@ -40,7 +40,7 @@ const Profile = () => {
             <img
               src={proimg}
               alt="profile_pic"
-              className="profile-container-proimg"
+              className="profile-container-proimg"  
             />
           </div>
           <br />
