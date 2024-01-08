@@ -1,10 +1,7 @@
 
-.whole-container{
-    display: flex;
 
-}
 
-.profile-container{
+.profile-container{ 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,11 +11,11 @@
 
 .profile-container-proimg{
     
-    width: 200px;
-    height: 200px;
+    width: 130px;
+    height: 130px;
     border-radius: 75px;
     box-shadow: 5px 5px 40px rgb(70, 56, 56);
-    margin-top: 120px;
+    margin-top: 40px;
     margin-left: 75px;
    
 }
@@ -50,7 +47,7 @@
 
 
 .details{
-    background-color: #000000;
+    /* background-color: rgb(221, 216, 216); */
     width:30rem;
     
     /* margin-top:25%;
@@ -59,18 +56,24 @@
     margin-bottom: 40%; */
     margin-left: 100px;
     border-radius: 7%;
-    box-shadow: 5px 5px 40px  rgb(2, 2, 2);
+    /* box-shadow: 5px 5px 40px  rgb(2, 2, 2); */
     
 }
 
+.details-right{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .user-pro{
-    background-color:rgb(221, 216, 216);
+    /* background-color:rgb(221, 216, 216); */
     margin-left: 2%;
     margin-right: 2%;
     display: flex;
     padding-left: 4%;
     border-radius: 15px;
-    box-shadow:3px 3px 10px  rgb(125, 125, 125) ;
+    /* box-shadow:3px 3px 10px  rgb(125, 125, 125) ; */
 }
 
 

@@ -8,24 +8,29 @@ import { useState, useEffect } from "react";
 const Manage = () => {
   const [isPopupVisible, setPopupVisible] = useState(false);
   const [eventsVisible, setEventsVisible] = useState(false);
+
+
+  const [searchInput, setSearchInput] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+
   const eventsList = [
     {
-      date: "26/10/2003",
-      title: "techno 2k23",
+      date: "26/1/2024",
+      title: "techno 2k24",
       description:
-        "This is an technical symposium conducted by sri eshwar college of engineering to teach students about the technologies",
+        "This is an technical symposium conducted by sri eshwar college of engineering to teach students about the technologies and the various other activities that are been there for the improvement of the students.",
     },
     {
-      date: "26/10/2003",
-      title: "techno 2k23",
+      date: "6/3/2024",
+      title: "CarMakano 2k24",
       description:
-        "This is an technical symposium conducted by sri eshwar college of engineering to teach students about the technologies",
+        "This is an technical symposium conducted by Carto college of engineering to teach students about the technologies and the inovations.",
     },
     {
-      date: "26/10/2003",
-      title: "techno 2k23",
+      date: "2/8/2024",
+      title: "MahindraTechno 2k24",
       description:
-        "This is an technical symposium conducted by sri eshwar college of engineering to teach students about the technologies",
+        "This is an technical symposium conducted by Mahindra college of engineering to teach students about the technologies",
     },
   ];
 
@@ -65,6 +70,23 @@ const Manage = () => {
     setIsRegistered(!isRegistered);
   };
 
+
+
+  const handleInputChange = (e) => {
+    setSearchInput(e.target.value);
+  };
+
+  const handleSearch = () => {
+
+    const filteredItems = eventsList.filter((item) =>
+      item.title.toLowerCase().includes(searchInput.toLowerCase())
+    );
+
+    setSearchResults(filteredItems);
+  };
+
+
+
   return (
     <div className="header">
       <div className="overall-wrapper">
@@ -74,13 +96,56 @@ const Manage = () => {
         <div className="events-btn" onClick={handleButtonClick}>
           <div>Add Events</div>
         </div>
+
         <div className="box">
-          <input type="text" placeholder="Search here..."></input>
-          <a href="#">
-            <i class="fas fa-search"></i>
-          </a>
+          <input
+            type="text"
+            placeholder="Search here..."
+            value={searchInput}
+            onChange={handleInputChange}
+          />
+          <button onClick={handleSearch} className="search-button">
+            <i className="fas fa-search"></i>
+          </button>
+          
         </div>
+
+
+
       </div>
+
+
+              
+      <div>
+          {searchResults.map((result) => (
+            <div key={result.title}>
+              <div className="feedback-item">
+                <div className="feedback-top">
+                  <div className="feedback-username">
+                    <h3>{result.title}</h3>
+                  </div>
+                  <div className="feedback-date">
+                    <h5>{result.date}</h5>
+                  </div>
+                </div>
+                <div className="feedback-text">
+                  <h4>{result.description}</h4>
+                </div>
+                <div className="register-unregister">
+                  <button
+                    className="register-unregister-button"
+                    onClick={handleClick}
+                  >
+                    {isRegistered ? "Unregister" : "Register"}
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      
+
+
       <div>
         {isPopupVisible && (
           <div className="popup">

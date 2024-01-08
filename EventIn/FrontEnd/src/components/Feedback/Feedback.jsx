@@ -3,8 +3,8 @@ import './Feedback.css'
 
 
 const Feedback = () => {
-  const feedbackList=[{name:"pagal",date:"23/10/2023",feedback:"the website is very good and responsive"},
-{name:"raghu",date:"30/10/2023",feedback:"the website user interface is awesome and want more functionalities"}]
+  const feedbackList=[{name:"Dilli",date:"23/10/2023",feedback:"the website is very good and responsive"},
+{name:"Surya",date:"30/10/2023",feedback:"the website user interface is awesome and want more functionalities"}]
   return (
     <div>
        {feedbackList.map((item,index)=>{

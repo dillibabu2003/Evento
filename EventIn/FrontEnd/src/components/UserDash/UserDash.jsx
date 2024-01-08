@@ -5,7 +5,7 @@ const UserDash = () => {
   return (
     <div className="UserDash">
       <div className="event-list">
-        <EventInfo/>
+        <EventInfo />
         <EventInfo />
         <EventInfo />
       </div>

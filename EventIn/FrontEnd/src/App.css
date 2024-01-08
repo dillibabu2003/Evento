@@ -11,24 +11,25 @@
   --activeItem: #f799a354;
 }
 
-#App{
+#App {
   color: var(--black);
-
-  
   height: 100vh;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Inter', sans-serif;
 }
 
-.appGlass{
-     display: grid;
-     height: 97%;
-     width: 97%;
-     border-radius: 2rem;
-     background-color: var(--glass);
-     overflow: hidden;
-     grid-template-columns: 17rem auto;
-     border:black solid 0.5px;
+.appGlass {
+  display: grid;
+  height: 95%;
+  width: 97%;
+  border-radius: 2rem;
+  background-color: var(--glass);
+  overflow: hidden;
+  grid-template-columns: 17rem auto;
+  border: rgb(255, 255, 255) solid 0.5px;
+  --glass: rgba(218, 207, 207, 0.54);
+  backdrop-filter: blur(10px); 
+  box-shadow: 0px 0px 10px 10px rgb(163, 163, 163) ;
 }

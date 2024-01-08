@@ -33,7 +33,7 @@ const Profile = () => {
 
   return (
     <div>
-      <h1>Profile</h1>
+    
       <div className="whole-container">
         <div className="profile-left">
           <div className="profile-container">
@@ -44,24 +44,14 @@ const Profile = () => {
             />
           </div>
           <br />
-          <div className="edit">
-            {editable ? (
-              <button className="edit-button" onClick={handleSaveClick}>
-                Save
-              </button>
-            ) : (
-              <button className="edit-button" onClick={handleEditClick}>
-                Edit
-              </button>
-            )}
-          </div>
+         
         </div>
         <div className="details-right">
           <div className="details">
             <br />
             <div className="user-pro">
               <h3>User Id</h3>
-              <div className="id">
+              <dic className="id">
                 {editable ? (
                   <input
                     type="text"
@@ -73,9 +63,9 @@ const Profile = () => {
                 ) : (
                   <span>{userData.userId}</span>
                 )}
-              </div>
+              </dic>
             </div>
-            <br />
+            <hr/>
             <div className="user-pro">
               <h3>User Name</h3>
               <div className="name">
@@ -92,7 +82,7 @@ const Profile = () => {
                 )}
               </div>
             </div>
-            <br />
+           <hr/>
             <div className="user-pro">
               <h3>E-mail</h3>
               <div className="mail">
@@ -109,7 +99,7 @@ const Profile = () => {
                 )}
               </div>
             </div>
-            <br />
+            <hr/>
             <div className="user-pro">
               <h3>Password</h3>
               <div className="pass">
@@ -126,7 +116,7 @@ const Profile = () => {
                 )}
               </div>
             </div>
-            <br />
+            <hr/>
             <div className="user-pro">
               <h3>Phone No</h3>
               <div className="number">
@@ -143,9 +133,22 @@ const Profile = () => {
                 )}
               </div>
             </div>
-            <br />
+            <hr/>
           </div>
         </div>
+                  <br/>
+        <div className="edit">
+            {editable ? (
+              <button className="edit-button" onClick={handleSaveClick}>
+                SAVE
+              </button>
+            ) : (
+              <button className="edit-button" onClick={handleEditClick}>
+                UPDATE PROFILE
+              </button>
+            )}
+          </div>
+
       </div>
     </div>
   );

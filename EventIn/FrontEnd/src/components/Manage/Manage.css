@@ -2,8 +2,8 @@
     height:3rem;
     width: 12rem;
     border-radius: 6%;
-    background-color: black;
-    color:white;
+    background-color: #DFD7BF;
+    color:#3F2305;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -12,7 +12,8 @@
 }
 .events-btn:hover{
     cursor: pointer;
-    background-color: rgb(131, 136, 136);
+    box-shadow: 2px 2px 2px 2px rgb(152, 106, 82);
+    background-color:#F5F5F5;
 }
 
 .overall-wrapper{
@@ -47,9 +48,9 @@
     background: transparent;
 }
 
-.box a .fas{
-    color: #171515;
-    font-size: 20px;
+.search-button{
+    background-color: white;
+    border: none;
 }
 
 .popup{
@@ -98,6 +99,7 @@ img{
     height:40px;
     box-shadow: 5px 5px 40px rgb(70, 56, 56);
     cursor: pointer;
+    border-radius: 20px;
     
 }
 
