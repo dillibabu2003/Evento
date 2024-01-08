@@ -35,7 +35,7 @@ const Profile = () => {
     <div>
     
       <div className="whole-container">
-        <div className="profile-left">
+        <div className="profile-left">  
           <div className="profile-container">
             <img
               src={proimg}
